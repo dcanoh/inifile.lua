@@ -11,12 +11,13 @@ Inifile parser.
 ===============  ==========  ============== ====================================================================================
 
 
-instalación
-^^^^^^^^^^^
 
-Para instalar ésta libreria recomiendo utilizar la linea de comandos de lide, usando ``lide install``.
+installation
+^^^^^^^^^^^^
 
-*Así todas las dependencias se instalarán automaticamente:*
+To install this library I recommend using the command line of lide, using `` lide install``.
+
+*Thus all the dependencies will be installed automatically:*
 
 ``$ lide install inifile``
 
@@ -28,7 +29,7 @@ lua API
 Basic usage functions.
 
 inifile.parse ( string stringToParse )
-	Create new Database object and connect using given sql driver.
+	Load string and return table.
 
 inifile.parse_file ( string fileToParse )
-	Executes the given SQL statement.
+	Load file and return table.
