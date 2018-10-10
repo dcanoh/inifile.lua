@@ -15,7 +15,7 @@ Inifile parser.
 installation
 ^^^^^^^^^^^^
 
-To install this library I recommend using the command line of lide, using `` lide install``.
+To install this library I recommend using the command line of lide, using ``lide install``.
 
 *Thus all the dependencies will be installed automatically:*
 

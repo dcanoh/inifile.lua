@@ -55,22 +55,21 @@ function inifile.parse ( inistring )
 			local si1, se1, si2, se2;
 			local section_str;
 
-			si1, se1 = inistring:find ( h_list[k] );       -- SectionEnd1
+			si1, se1 = inistring:find ( h_list[k] );       --> SectionEnd1
 			if h_list[k+1] then
-				si2, se2 = inistring:find ( h_list[k+1] ); --SectionInit2, SectionEnd2
+				si2, se2 = inistring:find ( h_list[k+1] ); --> SectionInit2, SectionEnd2
 			else
 				se2 = #inistring
 				si2 = se2
 			end
 
-			--- Si es el ultimo:
+			--- if is the last:
 			if (si2 == #inistring) then
 				section_str = (inistring:sub(se1+1, si2));
 			else
 				section_str = (inistring:sub(se1+1, si2-1));
 			end
-				--lide.log('section_str' .. section_str..':::')
-			--for _, line in pairs(section_str:delim '\n') do
+			
 			for line in section_str:gmatch("[^\r\n]+") do
 				if line:gsub(' ', '') ~= '' then
 					local line_del = line:delim '=';
